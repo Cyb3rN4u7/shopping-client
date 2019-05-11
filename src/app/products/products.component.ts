@@ -8,6 +8,7 @@ import { PRODUCTS } from '../model/mock-products';
 export class ProductsComponent implements OnInit {
 
   products = PRODUCTS;
+  categories = ['Books', 'Programming', 'Random'];
   constructor() { }
 
   ngOnInit() {

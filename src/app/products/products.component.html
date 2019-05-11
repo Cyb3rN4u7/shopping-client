@@ -1,14 +1,21 @@
-<div class="container-fluid">
+<div style="margin-top:5rem"  class="container-fluid">
+
+
   <div class="row">
-    <div class="col bg-dark text-white"> <a class="navbar-brand">SPORTS STORE</a> </div>
-  </div>
-  <div class="row">
-    <div class="col-3 bg-info p-2 text-white"> Categories </div>
+    <div class="col-3 bg-info p-2 text-white">
+      <h5>Categories</h5>
+      <div style="display: flex; flex-direction: column;">
+          <p *ngFor="let category of categories"><span class="badge badge-pill badge-primary float-left">
+              {{ category }} </span></p>
+        </div>
+      </div>
     <div class="col-9 p-2">
       <div *ngFor="let product of products" class="card m-1 p-1 bg-light">
         <h4> {{product.name}} <span class="badge badge-pill badge-primary float-right">
             {{ product.price | currency:"USD":"symbol":"2.2-2" }} </span> </h4>
         <div class="card-text bg-white p-1">{{product.description}}</div>
+        <p><span class="badge badge-pill badge-primary float-left">
+          {{ product.categories }} </span></p>
       </div>
     </div>
   </div>
