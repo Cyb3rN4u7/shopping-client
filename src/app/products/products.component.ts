@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PRODUCTS } from '../model/mock-products';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
+  products = PRODUCTS;
   constructor() { }
 
   ngOnInit() {

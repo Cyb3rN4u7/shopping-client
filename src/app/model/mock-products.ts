@@ -1,5 +1,5 @@
 import { Product } from './product';
-export const PRODUCTS : Product[] = [
+export const PRODUCTS: Product[] = [
   {
     id: 1,
     name: 'Black Keyboard',
@@ -28,4 +28,4 @@ export const PRODUCTS : Product[] = [
     price: 39.99,
     categories: ['Books', 'Interpersonal Skills', 'Critical Thinking']
   },
-]
+];
