@@ -11,7 +11,16 @@ export class ProductsComponent implements OnInit {
   categories = ['Books', 'Programming', 'Random'];
   constructor() { }
 
+  getCategories() {
+    const categoriesFromProducts =
+    this.products.map(product => product.categories)
+    .reduce((acc, cur) => acc.concat(cur));
+    const uniqueCategories = Array.from(new Set(categoriesFromProducts).values());
+    this.categories = uniqueCategories;
+    console.log(uniqueCategories);
+  }
   ngOnInit() {
+    this.getCategories();
   }
 
 }
