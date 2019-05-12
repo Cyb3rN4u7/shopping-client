@@ -28,4 +28,11 @@ export const PRODUCTS: Product[] = [
     price: 39.99,
     categories: ['Books', 'Interpersonal Skills', 'Critical Thinking']
   },
+  {
+    id: 5,
+    name: 'The MVC demystified',
+    description: 'What is that MVC that all (not really) are so hyped about',
+    price: 49.99,
+    categories: ['Books', 'MVC', 'Programming']
+  },
 ];
