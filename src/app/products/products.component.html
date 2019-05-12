@@ -5,7 +5,15 @@
     <div class="col-3 bg-info p-2 text-white">
       <h5>Categories</h5>
       <div style="display: flex; flex-direction: column;">
-          <p *ngFor="let category of categories"><span class="badge badge-pill badge-primary float-left">
+        <p
+           [class.active]="category == selectedCategory"
+           (click)="changeCategory(null)">
+           <span class="badge badge-pill product-categories-item float-left">
+             All </span></p>
+          <p *ngFor="let category of categories"
+           [class.active]="category == selectedCategory"
+           (click)="changeCategory(category)">
+           <span class="badge badge-pill product-categories-item float-left">
               {{ category }} </span></p>
         </div>
       </div>
