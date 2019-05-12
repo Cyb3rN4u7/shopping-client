@@ -25,7 +25,7 @@ export class ProductsComponent implements OnInit {
   }
 
   get products(): Product[] {
-    if(this.selectedCategory == null) {
+    if (this.selectedCategory == null) {
       return this.allProducts;
     }
     return this.allProducts.filter(product => product.categories.includes(this.selectedCategory));
